@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Patrick Ford</title>
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/main.css" rel="stylesheet">
+		<script src="js/jquery.min.js" ></script>
+
+		<script>
+			var topicCopy = new Array();
+			topicCopy[0] = "Greetings! This site provides a little information on my background and interests. The next few slides \
+               will present some details from my life as an Entrepreneur, Executive, Developer, Comedian, Scuba Instructor, and Poker Player.";
+			topicCopy[1] = "I have always been entrepreneurial. From starting a clamming business at 16 with the savings from my paper route, \
+               started a consulting business in college providing statistical analysis, to founding multiple startups after graduate school.";
+			topicCopy[2] = "Over the years I have founded several companies raising both angel and venture capital financing. \
+			   These included Level Four Interactive, Splash Studios, MrSwap.com, and The All-Seeing Eye Inc. which I sold to Yahoo!";
+			topicCopy[3] = "I have spent much of my career as a corporate executive working for some of the largest companies in the world. \
+			   I have sometimes overseen product development and other times been in charge of marketing.  I have worked for \
+			   such companies as: Microsoft, Fujitsu, GameSpy, Yahoo, and Atari.";
+			topicCopy[4] = "I discovered my passion for software development during the very first lecture of Computer Science \
+               101 in college. I knew right then that this was what I wanted to do. For about the first decade of my career I developed \
+               software before moving up into management. I am looking forward to bringing my development skills back up to date.";
+			topicCopy[5] = "I realized one of my lifelong dreams of doing stand up comedy in 2007 when I took a workshop \
+               and did my debut at the Hollywood Improv. Right away I was hooked and since \
+               have performed hundreds of times at venues large and small, have appeared on TV in \
+               Last Comic Standing, and have been in more than a dozen online video shorts for sites such as Funny or Die.";
+			topicCopy[6] = "I have been an avid scuba diver since 1990, and decided at age 43 to enroll in the training program to become \
+               both a rescue diver and certified instructor. I most enjoy diving solo at night hunting spiny lobster in the \
+               waters off of Laguna Beach and Malibu.";
+			topicCopy[7] = "One of my favorite interests is playing poker. I have been playing since my teens and honed my skills in the \
+               casinos of Lake Tahoe while living there for a winter. Over the years I have won many live and online \
+               tournaments including finishing in the money at The World Poker Tour.";
+
+            var topicIndex = 0;
+
+			function showCopy(i) {
+				$("p").append(topicCopy[i]);
+			}
+
+          	// Clears old topic and fetches next topic from array
+     		function refreshTopic() {
+      			$("p").empty();
+                topicIndex++;
+                if (topicIndex == 8) {
+                	topicIndex = 0;         
+                }
+     		    showCopy(topicIndex);
+		     }
+
+     		// Program start on document ready
+     		// Refreshes topic copy every 15 seconds
+      		$(document).ready(function() {
+      			showCopy(topicIndex);
+       			setInterval("refreshTopic();", 15000);
+      		});
+		</script>
+	</head>
+
+	<body>
+		<h1>Patrick Ford</h1>
+		<a href="http://www.facebook.com/patrick.ford"><img class = "social" src="images/facebook.png" alt="facebook"></a>
+		<a href="http://www.twitter.com/patrickford"><img class = "social" src="images/twitter.png" alt="twitter"></a>		
+		<a href="http://www.linkedin.com/in/patrickford"><img class = "social" src="images/linkedin.png" alt="linkedin"></a>
+		<ul class="topics">
+			<li>Entrepreneur</li>
+			<li>Executive</li>
+			<li>Developer</li>
+			<li>Comedian</li>
+			<li>Scuba Instructor</li>
+			<li>Poker Player</li>
+		</ul>
+		<img ID = "photo" src="images/patrickford300.png">
+		<p></p>
+
+	</body>	
+</html>

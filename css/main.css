@@ -1,0 +1,53 @@
+h1 {
+	font-size: 48px;
+}
+body {
+	background-color: black;
+	color: white;
+	font-family: helvetica;
+	margin: 20px;
+}
+p {
+	font-size: 24px;
+	background: white;
+    border: 5px;
+    margin-left: 20px;
+    padding: 10px;
+    color: gray;
+}
+ul {
+	list-style-type: none;
+	padding: 5px;
+	background: gray;
+}
+li {
+	font-size: 14px;
+	font-style: italic;
+	display: inline;
+	padding: 0px 5px 0px 5px;
+}
+#photo {
+	border: 5px solid white;
+	box-shadow: 5px 5px 5px #888888;
+	float:left;
+	margin-right: 20px;
+}
+.social {
+	margin: 0px 5px 0px 5px;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 36px;
+  }
+  li {
+    display: block;
+    padding: 5px;
+  }
+  #photo {
+  	float: none;
+  	margin: auto;
+  }
+  p {
+  	font-size: 16px;
+  }
+}
